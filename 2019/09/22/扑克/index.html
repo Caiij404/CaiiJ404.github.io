@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>在2019夏季的尾巴，我抓住了 - o(*￣▽￣*)ブ 喔哟,你来啦</title>
+    <title>扑克洗牌 - o(*￣▽￣*)ブ 喔哟,你来啦</title>
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate">
     <meta name="keywords" content="Caiij404,"> 
-    <meta name="description" content="常常因为自己不够优秀而感到恐慌,
-"> 
+    <meta name="description" content="常常因为自己不够优秀而感到恐慌,先上代码
+12345678910111213141516171819202122232425262728293031public class DeckOfCards &amp;#123;	public st,"> 
     <meta name="author" content="菜鸡"> 
     <link rel="alternative" href="atom.xml" title="o(*￣▽￣*)ブ 喔哟,你来啦" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -36,7 +36,7 @@
     <div class="bar" style="width: 0;"></div>
     <a class="icon-home image-icon" href="javascript:;" data-url="http://yoursite.com"></a>
     <div title="播放/暂停" class="icon-play"></div>
-    <h3 class="subtitle">在2019夏季的尾巴，我抓住了</h3>
+    <h3 class="subtitle">扑克洗牌</h3>
     <div class="social">
         <!--<div class="like-icon">-->
             <!--<a href="javascript:;" class="likeThis active"><span class="icon-like"></span><span class="count">76</span></a>-->
@@ -54,16 +54,24 @@
     <div class="section">
         <div class="article">
     <div class='main'>
-        <h1 class="title">在2019夏季的尾巴，我抓住了</h1>
+        <h1 class="title">扑克洗牌</h1>
         <div class="stuff">
-            <span>九月 20, 2019</span>
+            <span>九月 22, 2019</span>
             
-  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/随记/">随记</a></li></ul>
+  <ul class="post-tags-list"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/Java/">Java</a></li></ul>
 
 
         </div>
         <div class="content markdown">
-            <p><img src="https://s2.ax1x.com/2019/09/21/nzQdjs.jpg" alt="夏"></p>
+            <p>先上代码</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class DeckOfCards &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">		int[] deck = new int[52];</span><br><span class="line">		String[] suits = &#123; &quot;spades&quot;, &quot;hearts&quot;, &quot;diamonds&quot;, &quot;clubs&quot; &#125;;</span><br><span class="line">		String[] ranks = &#123; &quot;A&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;,</span><br><span class="line">		 &quot;10&quot;, &quot;J&quot;, &quot;Q&quot;, &quot;K&quot; &#125;;</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; deck.length; i++)</span><br><span class="line">			deck[i] = i;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; deck.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">			int index = (int) (Math.random() * deck.length);</span><br><span class="line">			int temp = deck[i];</span><br><span class="line">			deck[i] = deck[index];</span><br><span class="line">			deck[index] = temp;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; 4; i++) &#123;</span><br><span class="line">			String suit = suits[deck[i] / 13];</span><br><span class="line">			String rank = ranks[deck[i] % 13];</span><br><span class="line">			System.out.println(&quot;Card number &quot; + deck[i] + &quot;: &quot; + rank + &quot; Of &quot; + suit);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>用数组suits定义了四个花色，数组ranks存储A到K的牌数。</p>
+<p>程序在第 9 10行用0 到 S1初始化 deck。deck 的值为 0 表示黑桃 A,1表示黑桃 2, 13 表示红桃 A,14 表示红桃 2。 </p>
+<p>第 13 19行随意地打乱这副牌。在牌被打乱后，deck[i]中放的是一个任意的值。 deck[i]/l〗的值为 0、1、2 或 3, 该值确定这张牌是哪种花色（第 23 行）。deck[i]*13 的值 在 0 到 12 之间，该值确定这张牌是花色中的哪张牌（第 24 行)</p>
+<p>如果没有定义suits数组，那最后不得不使用冗长的 if-else 语句来确定花色</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if (deck[i] / 13 == 0)</span><br><span class="line">	System.out.print(&quot;suit is Spades&quot;);</span><br><span class="line">else if (deck[i] / 13 == 1)</span><br><span class="line">	System.out.print(&quot;suit is Hearts&quot;);</span><br><span class="line">else if (deck[i] / 13 == 2)</span><br><span class="line">	System.out.print(&quot;suit is Diamonds&quot;);</span><br><span class="line">else</span><br><span class="line">	System.out.print(&quot;suit 1s Clubs&quot;);</span><br></pre></td></tr></table></figure>
+
 
             <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
             <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="true">
