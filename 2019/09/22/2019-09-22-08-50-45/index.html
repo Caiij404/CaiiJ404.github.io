@@ -59,6 +59,8 @@
           
             <li class="header-navbar-item"><a href="/">首页</a></li>
           
+            <li class="header-navbar-item"><a href="/categories">分类</a></li>
+          
             <li class="header-navbar-item"><a href="/tags">标签</a></li>
           
             <li class="header-navbar-item"><a href="/about">关于</a></li>
@@ -95,7 +97,7 @@
       <div class="banner-content post-content no-post-image">
         <div class="post-text">
           <div class="type-wrap">
-            
+            <a class="article-category-link" href="/categories/学习/">学习</a>
           </div>
           <h1 class="title-wrap">扑克洗牌</h1>
           <div class="meta-wrap">
@@ -126,13 +128,13 @@
 
     <div class="article-entry">
       <p>先上代码</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">public class DeckOfCards &#123;</span><br><span class="line"></span><br><span class="line">	public static void main(String[] args) &#123;</span><br><span class="line"></span><br><span class="line">		int[] deck = new int[52];</span><br><span class="line">		String[] suits = &#123; &quot;spades&quot;, &quot;hearts&quot;, &quot;diamonds&quot;, &quot;clubs&quot; &#125;;</span><br><span class="line">		String[] ranks = &#123; &quot;A&quot;, &quot;1&quot;, &quot;2&quot;, &quot;3&quot;, &quot;4&quot;, &quot;5&quot;, &quot;6&quot;, &quot;7&quot;, &quot;8&quot;, &quot;9&quot;,</span><br><span class="line">		 &quot;10&quot;, &quot;J&quot;, &quot;Q&quot;, &quot;K&quot; &#125;;</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; deck.length; i++)</span><br><span class="line">			deck[i] = i;</span><br><span class="line">		</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; deck.length; i++) &#123;</span><br><span class="line"></span><br><span class="line">			int index = (int) (Math.random() * deck.length);</span><br><span class="line">			int temp = deck[i];</span><br><span class="line">			deck[i] = deck[index];</span><br><span class="line">			deck[index] = temp;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">		for (int i = 0; i &lt; 4; i++) &#123;</span><br><span class="line">			String suit = suits[deck[i] / 13];</span><br><span class="line">			String rank = ranks[deck[i] % 13];</span><br><span class="line">			System.out.println(&quot;Card number &quot; + deck[i] + &quot;: &quot; + rank + &quot; Of &quot; + suit);</span><br><span class="line">		&#125;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> class DeckOfCards &#123;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) &#123;<br><br>		<span class="hljs-keyword">int</span>[] deck = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">52</span>];<br>		<span class="hljs-keyword">String</span>[] suits = &#123; <span class="hljs-string">"spades"</span>, <span class="hljs-string">"hearts"</span>, <span class="hljs-string">"diamonds"</span>, <span class="hljs-string">"clubs"</span> &#125;;<br>		<span class="hljs-keyword">String</span>[] ranks = &#123; <span class="hljs-string">"A"</span>, <span class="hljs-string">"1"</span>, <span class="hljs-string">"2"</span>, <span class="hljs-string">"3"</span>, <span class="hljs-string">"4"</span>, <span class="hljs-string">"5"</span>, <span class="hljs-string">"6"</span>, <span class="hljs-string">"7"</span>, <span class="hljs-string">"8"</span>, <span class="hljs-string">"9"</span>,<br>		 <span class="hljs-string">"10"</span>, <span class="hljs-string">"J"</span>, <span class="hljs-string">"Q"</span>, <span class="hljs-string">"K"</span> &#125;;<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; deck.length; i++)<br>			deck[i] = i;<br>		<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; deck.length; i++) &#123;<br><br>			<span class="hljs-keyword">int</span> index = (<span class="hljs-keyword">int</span>) (Math.<span class="hljs-built_in">random</span>() * deck.length);<br>			<span class="hljs-keyword">int</span> temp = deck[i];<br>			deck[i] = deck[index];<br>			deck[index] = temp;<br>			<br>		&#125;<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>			<span class="hljs-keyword">String</span> suit = suits[deck[i] / <span class="hljs-number">13</span>];<br>			<span class="hljs-keyword">String</span> rank = ranks[deck[i] % <span class="hljs-number">13</span>];<br>			System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Card number "</span> + deck[i] + <span class="hljs-string">": "</span> + rank + <span class="hljs-string">" Of "</span> + suit);<br>		&#125;<br><br>	&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
 <p>用数组suits定义了四个花色，数组ranks存储A到K的牌数。</p>
 <p>程序在第 9 10行用0 到 S1初始化 deck。deck 的值为 0 表示黑桃 A,1表示黑桃 2, 13 表示红桃 A,14 表示红桃 2。 </p>
 <p>第 13 19行随意地打乱这副牌。在牌被打乱后，deck[i]中放的是一个任意的值。 deck[i]/l〗的值为 0、1、2 或 3, 该值确定这张牌是哪种花色（第 23 行）。deck[i]*13 的值 在 0 到 12 之间，该值确定这张牌是花色中的哪张牌（第 24 行)</p>
 <p>如果没有定义suits数组，那最后不得不使用冗长的 if-else 语句来确定花色</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">if (deck[i] / 13 == 0)</span><br><span class="line">	System.out.print(&quot;suit is Spades&quot;);</span><br><span class="line">else if (deck[i] / 13 == 1)</span><br><span class="line">	System.out.print(&quot;suit is Hearts&quot;);</span><br><span class="line">else if (deck[i] / 13 == 2)</span><br><span class="line">	System.out.print(&quot;suit is Diamonds&quot;);</span><br><span class="line">else</span><br><span class="line">	System.out.print(&quot;suit 1s Clubs&quot;);</span><br></pre></td></tr></table></figure>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">if</span> (deck[i] / 13 == 0)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Spades"</span>);<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (deck[i] / 13 == 1)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Hearts"</span>);<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (deck[i] / 13 == 2)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Diamonds"</span>);<br><span class="hljs-keyword">else</span><br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit 1s Clubs"</span>);<br></code></pre></td></tr></table></figure>
 
 
     </div>
@@ -219,6 +221,26 @@
 
 
 
+
+<!-- 百度链接提交 START -->
+<script>
+  (function () {
+    if (window.location.hostname === "localhost" || window.location.hostname.startsWith("192.168")) {
+      return console.log("本地调试");
+    }
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+      bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+    }
+    else {
+      bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+  })();
+</script>
+<!-- 百度链接提交 END -->
   
   
 
