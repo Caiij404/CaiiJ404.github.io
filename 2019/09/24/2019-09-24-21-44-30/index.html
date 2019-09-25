@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+  
+    <meta name="description" content="菜鸡，单身狗">
+  
+
+  
+
+  
+    <meta name="author" content="菜鸡">
+  
+
+  
+
+  
+
+  <title>扑克 | o(*￣▽￣*)ブ 来啦!</title>
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+    <link href="https://cdn.bootcss.com/highlight.js/9.15.6/styles/flex-block.min.css" rel="stylesheet">
+  
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <div id="container">
+    <!-- header -->
+<header class="header">
+  <div class="header-container ">
+    <nav class="header-navbar">
+      <div class="header-navbar-left">
+        <h1 class="header-navbar-logo">
+          <a href="/">
+            
+              <img src="https://qiniu.miiiku.xyz/src/images/logo.png" alt="o(*￣▽￣*)ブ 来啦!">
+            
+          </a>
+        </h1>
+      </div>
+      <div class="header-navbar-right">
+        <div class="header-navbar-btn">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <ul class="header-navbar-list">
+          
+            <li class="header-navbar-item"><a href="/">首页</a></li>
+          
+            <li class="header-navbar-item"><a href="/categories">分类</a></li>
+          
+            <li class="header-navbar-item"><a href="/tags">标签</a></li>
+          
+            <li class="header-navbar-item"><a href="/links">友链</a></li>
+          
+            <li class="header-navbar-item"><a href="/messages">留言</a></li>
+          
+            <li class="header-navbar-item"><a href="/about">关于</a></li>
+          
+        </ul>
+      </div>
+    </nav>
+  </div>
+</header>
+
+    <section id="main"><!-- 文章详情页 -->
+
+
+<!-- banner container -->
+<div class="banner-container">
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+
+  
+  
+    
+      <div class="banner-content post-content no-post-image">
+        <div class="post-text">
+          <div class="type-wrap">
+            <a class="article-category-link" href="/categories/学习/">学习</a>
+          </div>
+          <h1 class="title-wrap">扑克</h1>
+          <div class="meta-wrap">
+            <strong>菜鸡</strong>
+            <span>发布于</span>
+            
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-09-24T13:44:30.712Z" itemprop="datePublished">2019-09-24</time>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    
+  
+
+  
+  
+
+</div>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
+
+    <div class="article-entry">
+      <p>先上代码</p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> class DeckOfCards &#123;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) &#123;<br><br>		<span class="hljs-keyword">int</span>[] deck = <span class="hljs-keyword">new</span> <span class="hljs-keyword">int</span>[<span class="hljs-number">52</span>];<br>		<span class="hljs-keyword">String</span>[] suits = &#123; <span class="hljs-string">"spades"</span>, <span class="hljs-string">"hearts"</span>, <span class="hljs-string">"diamonds"</span>, <span class="hljs-string">"clubs"</span> &#125;;<br>		<span class="hljs-keyword">String</span>[] ranks = &#123; <span class="hljs-string">"A"</span>, <span class="hljs-string">"1"</span>, <span class="hljs-string">"2"</span>, <span class="hljs-string">"3"</span>, <span class="hljs-string">"4"</span>, <span class="hljs-string">"5"</span>, <span class="hljs-string">"6"</span>, <span class="hljs-string">"7"</span>, <span class="hljs-string">"8"</span>, <span class="hljs-string">"9"</span>,<br>		 <span class="hljs-string">"10"</span>, <span class="hljs-string">"J"</span>, <span class="hljs-string">"Q"</span>, <span class="hljs-string">"K"</span> &#125;;<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; deck.length; i++)<br>			deck[i] = i;<br>		<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; deck.length; i++) &#123;<br><br>			<span class="hljs-keyword">int</span> index = (<span class="hljs-keyword">int</span>) (Math.<span class="hljs-built_in">random</span>() * deck.length);<br>			<span class="hljs-keyword">int</span> temp = deck[i];<br>			deck[i] = deck[index];<br>			deck[index] = temp;<br>			<br>		&#125;<br><br>		<span class="hljs-built_in">for</span> (<span class="hljs-keyword">int</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">4</span>; i++) &#123;<br>			<span class="hljs-keyword">String</span> suit = suits[deck[i] / <span class="hljs-number">13</span>];<br>			<span class="hljs-keyword">String</span> rank = ranks[deck[i] % <span class="hljs-number">13</span>];<br>			System.out.<span class="hljs-built_in">println</span>(<span class="hljs-string">"Card number "</span> + deck[i] + <span class="hljs-string">": "</span> + rank + <span class="hljs-string">" Of "</span> + suit);<br>		&#125;<br><br>	&#125;<br><br>&#125;<br></code></pre></td></tr></table></figure>
+
+<p>用数组suits定义了四个花色，数组ranks存储A到K的牌数。</p>
+<p>程序在第 9 10行用0 到 S1初始化 deck。deck 的值为 0 表示黑桃 A,1表示黑桃 2, 13 表示红桃 A,14 表示红桃 2。 </p>
+<p>第 13 19行随意地打乱这副牌。在牌被打乱后，deck[i]中放的是一个任意的值。 deck[i]/l〗的值为 0、1、2 或 3, 该值确定这张牌是哪种花色（第 23 行）。deck[i]*13 的值 在 0 到 12 之间，该值确定这张牌是花色中的哪张牌（第 24 行)</p>
+<p>如果没有定义suits数组，那最后不得不使用冗长的 if-else 语句来确定花色</p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">if</span> (deck[i] / 13 == 0)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Spades"</span>);<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (deck[i] / 13 == 1)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Hearts"</span>);<br><span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (deck[i] / 13 == 2)<br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit is Diamonds"</span>);<br><span class="hljs-keyword">else</span><br>	System.out.<span class="hljs-builtin-name">print</span>(<span class="hljs-string">"suit 1s Clubs"</span>);<br></code></pre></td></tr></table></figure>
+
+
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">#Java</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+    
+      <div class="card-item">
+        <article>
+          
+          <a class="card-link article-nav-link" href="/2019/09/23/2019-09-23-08-21-03/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">两个有序序列的中位数</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+
+  
+  
+
+
+  </article>
+</div></section>
+
+    <!-- footer container -->
+<footer id="footer" class="footer">
+  <div class="footer-container">
+    <p>&copy; 2019 <a href="/" target="_blank">菜鸡</a></p>
+
+    
+      <p id="hitokoto"></p>
+      <script src="https://v1.hitokoto.cn/?c=a&amp;encode=js&select=%23hitokoto" defer></script>
+    
+
+    
+
+    <p>Powered by <a href="https://hexo.io" target="_blank">Hexo</a> Theme - <a href="https://github.com/miiiku/flex-block" target="_blank">flex-block</a></p>
+  </div>
+</footer>
+  </div>
+
+  
+  <!-- 尾部其他内容 -->
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+<!-- valine 评论 start -->
+<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
+<script type="text/javascript">
+  new Valine({
+    el: "#valine_thread",
+    appId: "9EQJKz1ANBzyC1Glynv2DAyH-gzGzoHsz",
+    appKey: "r8sDKz6QCMO4bibPcJxgQJcE",
+    avatar: "mm",
+    placeholder: "随便说点什么叭～",
+    notify: true,
+    visitor: true,
+    pageSize: 10,
+  });
+</script>
+<!-- valine 评论 end -->
+
+
+
+<!-- dplayer 视频 start -->
+<link rel="stylesheet" href="/lib/DPlayer.min.css">
+<script src="/lib/DPlayer.min.js"></script>
+<script type="text/javascript">
+  const dplayer = document.querySelectorAll(".dplayer");
+  dplayer && initDPlayer(dplayer);
+  function initDPlayer(els) {
+    let elsArr = Array.from(els);
+    elsArr.forEach(el => {
+      let url = el.dataset.url;
+      let cover = el.dataset.cover;
+      new DPlayer({
+        container: el,
+        video: { url: url, pic: cover },
+        theme: "#b7daff",
+        autoplay: false,
+        loop: false,
+        mutex: true,
+      });
+    });
+  }
+</script>
+<!-- dplayer 视频 end -->
+
+
+<!-- waterfall 瀑布流 start -->
+<script src="/lib/waterfall.min.js"></script>
+<script type="text/javascript">
+
+const waterfallDOM = document.querySelector(".waterfall-container");
+
+if (waterfallDOM) {
+  initCss();
+  initWaterfall(".waterfall-container", waterfallDOM);
+}
+
+function initWaterfall(selector, el) {
+  const options = {};
+  if (Object.keys(el.dataset).length > 0) {
+    for (let k in el.dataset) {
+      options[k] = el.dataset[k];
+    }
+  }
+  waterfall(selector, options);
+}
+
+function initCss() {
+  let cssStyle = document.createElement("style")
+  cssStyle.innerText = `.waterfall-container p { display: block; border-radius: 4px; overflow: hidden; margin: 0; }`
+  document.head.appendChild(cssStyle);
+}
+</script>
+<!-- waterfall 瀑布流 end -->
+
+
+<!-- zoom 图片预览 start -->
+<script src="/lib/zoom.min.js"></script>
+<script>
+  document.querySelector(".zoom") && zoom(".zoom", {
+    margin: 15,
+    padding: 15,
+    radius: 5,
+    specify: "",
+    filter: "gallery",
+  });
+</script>
+<!-- zoom 图片预览 end -->
+
+
+<script src="/js/script.js"></script>
+</body>
+</html>
