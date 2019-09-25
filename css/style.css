@@ -803,6 +803,7 @@ small {
 .article-entry img,
 .article-entry video {
   max-width: 100%;
+  max-height: 100vh;
   height: auto;
   display: block;
   margin: auto;
