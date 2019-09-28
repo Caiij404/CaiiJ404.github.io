@@ -28,7 +28,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
 
-  <title>2019的尾巴，我得抓住! | o(*￣▽￣*)ブ 来啦!</title>
+  <title>Bugku 黑页爆破 | o(*￣▽￣*)ブ 来啦!</title>
 
   
 
@@ -105,19 +105,18 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
   
   
     
-      <div class="banner-content post-content is-post-image">
-        <div class="post-image" style="background-image: url(https://s2.ax1x.com/2019/09/21/nzQdjs.jpg)"></div>
+      <div class="banner-content post-content no-post-image">
         <div class="post-text">
           <div class="type-wrap">
-            <a class="article-category-link" href="/categories/日常/">日常</a>
+            <a class="article-category-link" href="/categories/CTF/">CTF</a>
           </div>
-          <h1 class="title-wrap">2019的尾巴，我得抓住!</h1>
+          <h1 class="title-wrap">Bugku 黑页爆破</h1>
           <div class="meta-wrap">
             <strong>菜鸡</strong>
             <span>发布于</span>
             
   <a href="javascript:;" class="article-date">
-    <time datetime="2019-09-22T23:16:00.968Z" itemprop="datePublished">2019-09-23</time>
+    <time datetime="2019-09-28T01:57:03.142Z" itemprop="datePublished">2019-09-28</time>
   </a>
 
           </div>
@@ -139,50 +138,87 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     
 
     <div class="article-entry">
-      <h2 id="走过了春季烟雨的浪漫、夏季炎灼烈日"><a href="#走过了春季烟雨的浪漫、夏季炎灼烈日" class="headerlink" title="走过了春季烟雨的浪漫、夏季炎灼烈日"></a><center><font color="#66CDAA">走过了春季烟雨的浪漫、夏季炎灼烈日</font></center></h2><h2 id="如今，夏末秋初之际，惊觉此岁兜兜转转已过大半"><a href="#如今，夏末秋初之际，惊觉此岁兜兜转转已过大半" class="headerlink" title="如今，夏末秋初之际，惊觉此岁兜兜转转已过大半"></a><center><font color="#66CDAA">如今，夏末秋初之际，惊觉此岁兜兜转转已过大半</font></center></h2><h2 id="距离2020的到来，只富余百日"><a href="#距离2020的到来，只富余百日" class="headerlink" title="距离2020的到来，只富余百日    "></a><center><font color="#66CDAA">距离2020的到来，只富余百日    </font></center></h2><img src="https://s2.ax1x.com/2019/09/21/nzQdjs.jpg" width="60%" title="2019的夏末">
-   <!-- <div align="center">img标签</div>   图片居中  -->
+      <h1 id="说点什么"><a href="#说点什么" class="headerlink" title="说点什么"></a>说点什么</h1><p>在写下这句话时，我内心是崩溃的，是烦恼的<br>忍不住感叹…<br>我太难了!!!  </p>
+<p>网上已有许多解这题的答案，可我还是要写<br>不为别的，是为了记录下来，以后成长了再回望曾经勤勤恳恳的自己<br><del>就是菜，网上的解答，对第一次接触爆破的小白不太友好，还是得自己琢磨</del>  </p>
+<br>  
+
+
+<h1 id="好吧，开始"><a href="#好吧，开始" class="headerlink" title="好吧，开始"></a>好吧，开始</h1><img src="https://s2.ax1x.com/2019/09/28/uQ8fQP.png" width="50%">    
+
+<br>
+
+<p>进来看到哇哇哇哇哇哇哇…没什么信息  </p>
+<br>
+
+<img src="https://s2.ax1x.com/2019/09/28/uQGDlq.png" width="50%">    
+
+<br>
+
+<p>一般的步骤应该是  </p>
+<ul>
+<li>查看网页源代码  </li>
+<li>抓包  </li>
+<li>查看后台<br>由简到繁，一步一步走  </li>
+</ul>
+<br>
+
+<p>这里源代码和抓包都没东西啊<br>就省略步骤了  </p>
+<h1 id="查看后台"><a href="#查看后台" class="headerlink" title="查看后台"></a>查看后台</h1><p>那么来到第三步，<font color="##EE7942">查看后台</font></p>
+<br>
+
+<img src="https://s2.ax1x.com/2019/09/28/uQJLrV.png" width="50%">    
+
+<br>
+
+<p>按着步骤走，就可以得到一个网址<a href="http://123.206.87.240:8002/webshell/shell.php" target="_blank" rel="noopener">http://123.206.87.240:8002/webshell/shell.php</a><br>打开发现需要<font color="##EE7942">密码</font><br>按思路来说，这里就应该去burp suite爆破了<br><img src="https://s2.ax1x.com/2019/09/28/uQYNGj.png" width="50%">    </p>
+<br>
+
+<h1 id="爆破"><a href="#爆破" class="headerlink" title="爆破"></a>爆破</h1><p>像前面说的，第一次接触爆破…操作都不太懂，网上的教程步骤是有省略的，对自己不太友好🤷🤷🤷<br>话不多说  </p>
+<br>
+
+<p>还是先抓取网页啊</p>
+<img src="https://s2.ax1x.com/2019/09/28/uQYci4.png" width="50%">    
+
+<br>
+
+<p>这里需要查看源代码，就能发现有个<font color="#EE7942">&lt;form method=”POST”&gt;</font><br>这具体是什么就另说吧<br>简单说就是输入密码传送给服务器嘛，正确就得到flag，错误就”    <font color="#f00d0a">*不是自己的马不要乱骑！*</font>“  🤦</p>
+<img src="https://s2.ax1x.com/2019/09/28/uQdOq1.png" width="70%">    
+
+<br>
+
+<p>来到这里，在代码下方输入”POST=”，然后再点击有点”Auto$”<br>这是设置变量吗？我也不是太懂这什么说法的</p>
+<img src="https://s2.ax1x.com/2019/09/28/uQNdbV.png" width="70%">    
+
+<br>
+
+<p>来到Payload，设置好那两个玩意后，就可以开始”Start attack”了  </p>
+<img src="https://s2.ax1x.com/2019/09/28/uQN55D.png" width="70%">    
+
+<br>
+
+<p>看图，开始跑了。<br>静候那个不同于其他长度的字符串出现吧!!!!  </p>
+<img src="https://s2.ax1x.com/2019/09/28/uQwsdx.png" width="60%">
+
+<br>
+
+<h2 id="但是呢"><a href="#但是呢" class="headerlink" title="但是呢"></a><font color="#66CDAA">但是呢</font></h2><p>就出现了点小问题<br>这他喵的本该是答案的字符串，其长度居然还是和普通的字符串一样!!!<br>老子来来回回又试了几次还不行…</p>
+<img src="https://s2.ax1x.com/2019/09/28/uQ0rcQ.png" width="60%">
 
 <br>
 <br>
-
-
-<p>回望之前的日子，只觉得人生长短如戏一般，艰难也罢，开心也罢，都是过去<br>在那段时间里，确实是经历了许多<br>每个单个的日子，听课做笔记，虽似漫长，如今看过去，却感时光荏苒，一晃而过<br>可这就是人生的常态吧</p>
 <br>
-<!--一句话后要换行，在句末打两个空格再回车就可，但还有一点需要注意的是，最开头的文字要与前面的 br 换行符空开一行，不然好像会失效-->
 
-<p>有句话说，生活需要点仪式感<br>所以啊，我就想给这100天留下点东西。  </p>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<div class="waterfall-container"><img src="https://s2.ax1x.com/2019/09/23/uFNv4S.jpg" width="20%" title="人生是一场蹉跎，愿你别错过  ——190923">
-<br>
-<img src="https://s2.ax1x.com/2019/09/25/uEsEM6.jpg" width="30%" title="6点半的天空 : 努力的人运气都不会差  ——190924">
-<br>
-<img src="https://s2.ax1x.com/2019/09/25/ueGyWT.jpg" width="24%" title="有点坎坷的一天，但总算过去了  ——190925">
-<br>
-<img src="https://s2.ax1x.com/2019/09/27/uuEkVS.gif" width="31%" title="有句话说福无双至祸不单行，还有句话说打不倒我的终将使我强大  ——190926">
-<br>
-<img src="https://s2.ax1x.com/2019/09/27/uM5Sqf.jpg" width="25%" title="有点快的一天？  ——190927">
+<img src="https://s2.ax1x.com/2019/09/28/uQav9g.jpg" width="56%">
 
+<p>果然我还是太菜了  </p>
+<br>
 
+<p>算了，起码知道怎么做了<br>就到这里吧，累了。</p>
 
-
-
-
-
-
-
-
-</div>
     </div>
 
     <div class="article-footer">
-      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/倒计时100/">#倒计时100</a></li></ul>
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/后台-爆破/">#后台&爆破</a></li></ul>
     </div>
 
     <div class="article-navs">
@@ -190,15 +226,17 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <nav class="card-container card-article-nav">
   <div class="card-wrap">
     
-      <div class="card-item">
+    
+      <div class="card-item img">
         <article>
           
-          <a class="card-link article-nav-link" href="/2019/09/23/归并算法/"></a>
-          <div class="article-nav-caption">Newer</div>
-          <div class="article-nav-title">归并算法(搬砖)</div>
+            <div class="card-cover" style="background-image: url(https://s2.ax1x.com/2019/09/27/uKNggI.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/09/27/质数/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">质数的终极解决</div>
         </article>
       </div>
-    
     
   </div>
 </nav>
