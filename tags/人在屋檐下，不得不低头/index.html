@@ -28,7 +28,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
 
-  <title>GitHub天坑 | o(*￣▽￣*)ブ 来啦!</title>
+  <title>Tag: 人在屋檐下，不得不低头 | o(*￣▽￣*)ブ 来啦!</title>
 
   
 
@@ -84,7 +84,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
   </div>
 </header>
 
-    <section id="main"><!-- 文章详情页 -->
+    <section id="main"><!-- 标签归档 -->
 
 
 <!-- banner container -->
@@ -101,28 +101,17 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
   
-
-  
-  
     
-      <div class="banner-content post-content no-post-image">
-        <div class="post-text">
-          <div class="type-wrap">
-            <a class="article-category-link" href="/categories/Git/">Git</a>
-          </div>
-          <h1 class="title-wrap">GitHub天坑</h1>
-          <div class="meta-wrap">
-            <strong>菜鸡</strong>
-            <span>发布于</span>
-            
-  <a href="javascript:;" class="article-date">
-    <time datetime="2019-09-29T06:51:31.969Z" itemprop="datePublished">2019-09-29</time>
-  </a>
-
-          </div>
-        </div>
+    <div class="banner-content full-content">
+      <div class="post-image" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner.jpg)"></div>
+      <div class="post-text">
+        <h1 class="title-wrap">人在屋檐下，不得不低头</h1>
+        <h2 class="title-sub-wrap">当前标签下共有1篇文章</h2>
       </div>
-    
+    </div>
+  
+
+  
   
 
   
@@ -130,96 +119,42 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
 </div>
 
-<!-- 文章内容 -->
-
+<!-- post list container -->
 <div class="body-container">
-  <article id="article-content" class="main-container article-content zoom">
-    
-    
-
-    <div class="article-entry">
-      <h1 id="与远程仓库失联了？"><a href="#与远程仓库失联了？" class="headerlink" title="与远程仓库失联了？"></a>与远程仓库失联了？</h1><p>为什么起个标题叫<strong>天坑</strong>呢，因为隔三差五就塌个坑出来…  </p>
-<p>刚才还好好的，突然说&quot;Could not read from remote repository&quot;,这一天天的瞎整什么玩意？？  </p>
-<img src="https://s2.ax1x.com/2019/09/29/u8kTRU.png" width="50%">  
-
-<p>但莫得办法哩，谁让人家东西这么好，还免费<br>失联，就再联呗  </p>
-<h1 id="记录下免得天天查"><a href="#记录下免得天天查" class="headerlink" title="记录下免得天天查"></a>记录下免得天天查</h1><p>在本地文件处打开<strong>&quot;Git Bash&quot;</strong>，然后输入一下命令  </p>
-<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined">git<span class="hljs-built_in"> config </span>--global user.name <span class="hljs-string">"Caiij404"</span>  <br><br>git<span class="hljs-built_in"> config </span>--global user.emaim <span class="hljs-string">"1061690773@qq.com"</span><br><br>ssh-keygen -t rsa -C <span class="hljs-string">"1061690773@qq.com"</span><br></code></pre></td></tr></table></figure>
-
-<p>然后出现了  </p>
-<figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">Generating <span class="hljs-keyword">public</span>/<span class="hljs-keyword">private</span> rsa <span class="hljs-keyword">key</span> pair.<br>Enter file <span class="hljs-keyword">in</span> which <span class="hljs-keyword">to</span> save the <span class="hljs-keyword">key</span> (/c/Users/啊伊梭喔/.ssh/id_rsa):<br></code></pre></td></tr></table></figure>
-
-
-<p>敲回车</p>
-<figure class="highlight livecodeserver"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs undefined">Created <span class="hljs-built_in">directory</span> <span class="hljs-string">'/c/Users/啊伊梭喔/.ssh'</span>.<br>Enter passphrase (<span class="hljs-literal">empty</span> <span class="hljs-keyword">for</span> no passphrase):<br>Enter same passphrase again:<br></code></pre></td></tr></table></figure>
-
-<p>再敲两次回车<br>然后就出现</p>
-<figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">Your identification has been saved <span class="hljs-keyword">in</span> <span class="hljs-regexp">/c/</span>Users<span class="hljs-regexp">/啊伊梭喔/</span>.ssh/id_rsa.<br>Your <span class="hljs-keyword">public</span> key has been saved <span class="hljs-keyword">in</span> <span class="hljs-regexp">/c/</span>Users<span class="hljs-regexp">/啊伊梭喔/</span>.ssh/id_rsa.pub.<br></code></pre></td></tr></table></figure>
-
-<p>那么来到本地<strong>/C/Users/啊伊梭喔/.ssh</strong><br>进去就有两个文件，用文本打开<strong>id_rsa.pub.</strong><br>将内容复制  </p>
-<p>来到<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>，进入<strong>settings</strong>，点击<strong>SSH and GPG keys</strong><br>新建密钥<strong>NEW SSH key</strong>，<strong>title</strong>随意，将刚复制的内容粘贴在<strong>key</strong>框，<strong>Add SSH key</strong>!!  </p>
-<p>再次来到刚才的<strong>&quot;Git Bash&quot;</strong>,输入：  </p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-selector-tag">ssh</span> <span class="hljs-selector-tag">-T</span> <span class="hljs-selector-tag">git</span>@<span class="hljs-keyword">github</span>.<span class="hljs-keyword">com</span><br></code></pre></td></tr></table></figure>
-
-<p>然后就出现</p>
-<img src="https://s2.ax1x.com/2019/09/29/u8ZhXF.png" width="50%">  
-
-<p>此时，就联系上远程仓库了!!!!  </p>
-<p>在上传本地文件  </p>
-<img src="https://s2.ax1x.com/2019/09/29/u8em7j.png" width="50%">  
-
-<br>
-<br>
-<br>
-
-<img src="https://s2.ax1x.com/2019/09/29/u8etHJ.jpg" width="30%">  
-
-
-<br>
-<br>
-<br>
-
-<p>我在想，是不是自己老是用localhost:4000查看文章效果而导致失联的…</p>
-
-    </div>
-
-    <div class="article-footer">
-      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/人在屋檐下，不得不低头/">#人在屋檐下，不得不低头</a></li></ul>
-    </div>
-
-    <div class="article-navs">
-      
-<nav class="card-container card-article-nav">
-  <div class="card-wrap">
-    
-    
-      <div class="card-item">
-        <article>
+  <div class="main-container article-list">
+    <div class="card-container card-articles">
+      <div class="card-wrap">
+        
           
-          <a class="card-link article-nav-link" href="/2019/09/28/这是该反思的一天/"></a>
-          <div class="article-nav-caption">Older</div>
-          <div class="article-nav-title">路还很长，也该停下脚步，回头看看</div>
-        </article>
+          <div class="card-item">
+            <article>
+              
+              
+                <a class="article-link" href="/2019/09/29/GitHub的一个天坑/" itemprop="url"></a>
+              
+              <h2 class="article-title">GitHub天坑</h2>
+              <div class="article-meta">
+                <strong>菜鸡</strong>
+                <span>发布于</span>
+                
+  <a href="/2019/09/29/GitHub的一个天坑/" class="article-date">
+    <time datetime="2019-09-29T06:51:31.969Z" itemprop="datePublished">2019-09-29</time>
+  </a>
+
+              </div>
+              <div class="article-category">
+                <a class="article-category-link" href="/categories/Git/">Git</a>
+              </div>
+            </article>
+          </div>
+        
       </div>
-    
-  </div>
-</nav>
-
     </div>
-    
-    
-
-  
-  <div class="valine-container">
-    <div id="valine_thread" class="valine-thread"></div>
   </div>
+</div>
 
-  
-  
-
-
-  </article>
-</div></section>
+<!-- page container -->
+</section>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
@@ -301,23 +236,6 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
   
-<!-- valine 评论 start -->
-<script type="text/javascript" src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
-<script type="text/javascript" src="//unpkg.com/valine/dist/Valine.min.js"></script>
-<script type="text/javascript">
-  new Valine({
-    el: "#valine_thread",
-    appId: "yzyheIM2SYPBR9sOpizN9Qzj-MdYXbMMI",
-    appKey: "0QAJMo4eNL2cQxIXJJGtOKAQ",
-    avatar: "mm",
-    placeholder: "随便说点什么叭～",
-    notify: true,
-    visitor: true,
-    pageSize: 10,
-  });
-</script>
-<!-- valine 评论 end -->
-
 
 
 <!-- dplayer 视频 start -->
