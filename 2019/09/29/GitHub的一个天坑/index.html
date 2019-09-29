@@ -156,7 +156,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <p>再敲两次回车<br>然后就出现</p>
 <figure class="highlight groovy"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined">Your identification has been saved <span class="hljs-keyword">in</span> <span class="hljs-regexp">/c/</span>Users<span class="hljs-regexp">/啊伊梭喔/</span>.ssh/id_rsa.<br>Your <span class="hljs-keyword">public</span> key has been saved <span class="hljs-keyword">in</span> <span class="hljs-regexp">/c/</span>Users<span class="hljs-regexp">/啊伊梭喔/</span>.ssh/id_rsa.pub.<br></code></pre></td></tr></table></figure>
 
-<p>那么来到本地<strong>/C/Users/啊伊梭喔/.ssh</strong><br>进去就有两个文件，用文本打开<strong>id_rsa.pub.</strong><br>将内容复制  </p>
+<p>那么来到本地<strong>/C/Users/啊伊梭喔/.ssh</strong>(记得要删除本来的.ssh文件😑)<br>进去就有两个文件，用文本打开<strong>id_rsa.pub.</strong><br>将内容复制  </p>
 <p>来到<a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>，进入<strong>settings</strong>，点击<strong>SSH and GPG keys</strong><br>新建密钥<strong>NEW SSH key</strong>，<strong>title</strong>随意，将刚复制的内容粘贴在<strong>key</strong>框，<strong>Add SSH key</strong>!!  </p>
 <p>再次来到刚才的<strong>&quot;Git Bash&quot;</strong>,输入：  </p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-selector-tag">ssh</span> <span class="hljs-selector-tag">-T</span> <span class="hljs-selector-tag">git</span>@<span class="hljs-keyword">github</span>.<span class="hljs-keyword">com</span><br></code></pre></td></tr></table></figure>
@@ -165,7 +165,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <img src="https://s2.ax1x.com/2019/09/29/u8ZhXF.png" width="50%">  
 
 <p>此时，就联系上远程仓库了!!!!  </p>
-<p>在上传本地文件  </p>
+<p>再上传本地文件  </p>
 <img src="https://s2.ax1x.com/2019/09/29/u8em7j.png" width="50%">  
 
 <br>
