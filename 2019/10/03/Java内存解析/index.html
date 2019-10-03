@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head><meta name="generator" content="Hexo 3.9.0">
+  <meta name="baidu-site-verification" content="EUJsgaddNI">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -137,7 +138,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     
 
     <div class="article-entry">
-      <h1 id="Java中的变量方法在内存中是怎么分配的？"><a href="#Java中的变量方法在内存中是怎么分配的？" class="headerlink" title="Java中的变量方法在内存中是怎么分配的？"></a>Java中的变量方法在内存中是怎么分配的？</h1><p>4类8种基本数据类型  </p>
+      <h1 id="Java中的变量方法在内存中是怎么分配的？"><a href="#Java中的变量方法在内存中是怎么分配的？" class="headerlink" title="Java中的变量方法在内存中是怎么分配的？"></a><font color="#B22222">Java中的变量方法在内存中是怎么分配的？</font></h1><p>4类8种基本数据类型  </p>
 <ul>
 <li>整型： byte short int long</li>
 <li>浮点： float double  </li>
@@ -146,18 +147,49 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 </ul>
 <br> 
 
-<p>除此之外，还有<strong>引用类型</strong>，<em>String<em>，自己定义的</em>类</em> 等都属于<strong>引用类型</strong><br>而引用类型的内存分配分为两块，在栈内存和堆内存各占一块<br>引用类型定义的变量的真正内容存储在堆内存，而在栈内存存储着能找到堆内存的&quot;地址&quot;  </p>
-<h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a>引用类型</h1><p>对引用类型用个比喻，就相当于故宫，大门及各个楼房都有🔒<br>而这些个钥匙以及故宫的路线，还有每个楼房具体在故宫哪里的信息都存储在一个箱子里，箱子也有🔒  </p>
+<p>除此之外，还有<strong>引用类型</strong>，<em>String<em>，自己定义的</em>类</em> 等都属于引用类型<br>而引用类型的内存分配分为两块，在栈内存和堆内存各占一块<br>引用类型定义的变量的真正内容存储在堆内存，而在栈内存存储着能找到堆内存的&quot;地址&quot;  </p>
+<h1 id="引用类型"><a href="#引用类型" class="headerlink" title="引用类型"></a><font color="#CDB38B">引用类型</font></h1><p>对引用类型用个比喻，就相当于故宫，大门及各个楼房都有🔒<br>而这些个钥匙以及故宫的路线，还有每个楼房具体在故宫哪里的信息都存储在一个箱子里，箱子也有🔒  </p>
 <p>一般来说，我们只能访问&quot;箱子&quot;，然后再去故宫  </p>
+<p><font color="#CD5555">引用类型一般会用到<strong>关键字new</strong> </font></p>
 <figure class="highlight processing"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs undefined">class Birthday &#123;<br><br>	<span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> <span class="hljs-built_in">day</span>;<br>	<span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> <span class="hljs-built_in">month</span>;<br>	<span class="hljs-keyword">private</span> <span class="hljs-built_in">int</span> <span class="hljs-built_in">year</span>;<br><br>	Birthday(<span class="hljs-built_in">int</span> d, <span class="hljs-built_in">int</span> m, <span class="hljs-built_in">int</span> y) &#123;<br>		<span class="hljs-built_in">day</span> = d;<br>		<span class="hljs-built_in">month</span> = m;<br>		<span class="hljs-built_in">year</span> = y;<br>	&#125;<br><br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> changeDay(Birthday i, <span class="hljs-built_in">int</span> k) &#123;<br>		i.<span class="hljs-built_in">day</span> = k;<br>	&#125;<br><br>	<span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> showBirth(Birthday i) &#123;<br>		System.out.<span class="hljs-built_in">println</span>(i.<span class="hljs-built_in">day</span> + <span class="hljs-string">"-"</span> + i.<span class="hljs-built_in">month</span> + <span class="hljs-string">"-"</span> + i.<span class="hljs-built_in">year</span>);<br>	&#125;<br><br>	<span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) &#123;<br>		Birthday Tom = <span class="hljs-keyword">new</span> Birthday(<span class="hljs-number">01</span>, <span class="hljs-number">04</span>, <span class="hljs-number">1999</span>);<br>		showBirth(Tom);<br>		changeDay(Tom, <span class="hljs-number">02</span>);<br>		showBirth(Tom);<br>	&#125;<br>&#125;<br></code></pre></td></tr></table></figure>
 
-<p>上面提及的<strong>而在栈内存存储着能找到堆内存的&quot;地址&quot;</strong>，明显&quot;地址&quot;不是真的地址<br>我们不能说栈内存里的内容就是堆内存的地址<br>如上面的代码，在类里，有成员变量，各种方法<br>然后我们定义一个对象<strong>Tom</strong><br>Tom这个对象是存放在栈内存里，而Tom的day,month,year,Birthday(),changeDay()等等都是存放在<strong>堆内存</strong>中<br>那我们能说栈内存里存的就是堆内存的地址吗？<br>答案是不能！<br>通过Tom可以访问到每个成员变量及方法，那Tom还只是堆内存的地址吗？  </p>
+<p>上面提及的<strong>而在栈内存存储着能找到堆内存的&quot;地址&quot;</strong>，明显&quot;地址&quot;不是真的地址<br>我们不能说栈内存里的内容就是堆内存的地址  </p>
+<br>
+
+<p>如上面的代码，在类里，有成员变量，各种方法<br>然后我们定义一个对象<strong>Tom</strong><br>Tom这个对象是存放在栈内存里，而<font color="#EEAD0E">Tom的day,month,year,Birthday(),changeDay()等等都是存放在<strong>堆内存</strong>中</font><br>对象的基本类型成员变量和方法都<strong>堆</strong>在一起，放在<strong>堆内存</strong>里，而普通的基本类型变量则只是放在栈内存中<br>那我们能说栈内存里存的就是堆内存的地址吗？<br>答案是不能！  </p>
+<br>
+
+<p>通过Tom可以访问到每个成员变量及方法，那Tom还只是堆内存的地址吗？  </p>
+<br>
+<br>
+<br>
+
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">changeDay</span><span class="hljs-params">(Birthday i, <span class="hljs-keyword">int</span> k)</span> </span>&#123;<br>		i.day = k;<br>	&#125;<br>	<br>changeDay(Tom, <span class="hljs-number">02</span>);<br></code></pre></td></tr></table></figure>
 
 <p>分析一下这几行代码<br>在主函数中<br>运行到<strong>changeDay(Tom,02)</strong><br>调用方法<strong>changeDay(Birthday i, int k)</strong><br>在栈内存会定义一个Birthday变量i，一个整型k，在堆内存中会有i的各个成员变量和方法(或许是没有这个堆内存，紧跟着后面i就指向Tom了)<br>然后i指向Tom<br>i再引用day，并将k的值赋值给i引用的day<br>刚说的i指向Tom，所以修改的day是Tom的day  </p>
 <p>运行结果:  </p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-number">1</span><span class="hljs-number">-4</span><span class="hljs-number">-1999</span><br><span class="hljs-number">2</span><span class="hljs-number">-4</span><span class="hljs-number">-1999</span><br></code></pre></td></tr></table></figure>
 
+<br>
+
+<p>在调用方法的同时也可以new一个对象，当作形参传值！！  </p>
+<figure class="highlight mipsasm"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">showBirth(new </span><span class="hljs-keyword">Birthday(01 </span>, <span class="hljs-number">03</span> , <span class="hljs-number">1999</span>))<span class="hljs-comment">;</span><br><br><span class="hljs-keyword">Birthday </span><span class="hljs-keyword">Jack </span>= new <span class="hljs-keyword">Birthday(01 </span>, <span class="hljs-number">03</span> , <span class="hljs-number">1999</span>)<span class="hljs-comment">;</span><br><span class="hljs-keyword">showBirth(Jack);</span><br></code></pre></td></tr></table></figure>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+<p>这里既然提及了4类8种基本类型<br>那就顺便讲讲在怎么<strong>区分整型中的byte,short,int,long的方法重载</strong>  </p>
+<figure class="highlight arduino"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> main(<span class="hljs-keyword">String</span>[] args) &#123;<br><br>	<span class="hljs-keyword">void</span> <span class="hljs-built_in">max</span>(<span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> b) &#123;<br>		System.out.<span class="hljs-built_in">println</span>(a &gt; b ? a : b);<br>	&#125;<br>	<br>	<span class="hljs-keyword">void</span> <span class="hljs-built_in">max</span>(<span class="hljs-keyword">short</span> a,<span class="hljs-keyword">short</span> b) &#123;<br>		System.out.<span class="hljs-built_in">println</span>(a &gt; b ? a : b);<br>	&#125;<br>	<br>	<span class="hljs-built_in">max</span>(<span class="hljs-number">4</span> , <span class="hljs-number">9</span>);<br>	<br>	<span class="hljs-keyword">short</span> a = <span class="hljs-number">4</span>;<br>	<span class="hljs-keyword">short</span> b = <span class="hljs-number">9</span>;<br>	<br>	<span class="hljs-built_in">max</span>(a , b);<br>	<br>&#125;<br></code></pre></td></tr></table></figure>
+
+<br>
+
+<p>再说一句，<strong>仅仅返回值不一样不构成重载</strong>    </p>
 
     </div>
 
