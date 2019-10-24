@@ -27,7 +27,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
 
-  <title>标签 | 赶夜人</title>
+  <title>数字三角形 | 赶夜人</title>
 
   
 
@@ -83,7 +83,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
   </div>
 </header>
 
-    <section id="main"><!-- 页面详情页 -->
+    <section id="main"><!-- 文章详情页 -->
 
 
 <!-- banner container -->
@@ -103,55 +103,112 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
   
+    
+      <div class="banner-content post-content is-post-image">
+        <div class="post-image" style="background-image: url(https://s2.ax1x.com/2019/10/16/Kk9xo9.gif)"></div>
+        <div class="post-text">
+          <div class="type-wrap">
+            <a class="article-category-link" href="/categories/学习/">学习</a>
+          </div>
+          <h1 class="title-wrap">数字三角形</h1>
+          <div class="meta-wrap">
+            <strong>菜鸡</strong>
+            <span>发布于</span>
+            
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-10-16T14:41:53.680Z" itemprop="datePublished">2019-10-16</time>
+  </a>
+
+          </div>
+        </div>
+      </div>
+    
+  
 
   
-  
-    <div class="banner-content full-content">
-      <div class="post-image" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner.jpg)"></div>
-      <div class="post-text">
-        <h1 class="title-wrap">标签</h1>
-        
-        <h2 class="title-sub-wrap">共有9个标签</h2>
-        
-      </div>
-    </div>
   
 
 </div>
 
-<!-- 自定义页面 -->
+<!-- 文章内容 -->
 
 <div class="body-container">
-  
-  
-  <article class="main-container article-content">
-    <div class="article-entry"><h3 align="center">☁️️️️️️️️️️️☁️️️️️️️️️️️☁️️️️️️️️️️️</h3>
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
 
-<h3 align="center">标签列表</h3>
+    <div class="article-entry">
+      <h1 id="数字三角形"><a href="#数字三角形" class="headerlink" title="数字三角形"></a>数字三角形</h1><p>给定一个由 n行数字组成的数字三角形如下图所示。试设计一个算法，计算出从三角形 的顶至底的一条路径(每一步可沿左斜线向下或右斜线向下)，使该路径经过的数字总和最大。</p>
+<p>输入格式:<br>输入有n+1行：</p>
+<p>第 1 行是数字三角形的行数 n，1&lt;=n&lt;=100。</p>
+<p>接下来 n行是数字三角形各行中的数字。所有数字在0..99 之间。</p>
+<p>输出格式:<br>输出最大路径的值。</p>
+<p>输入样例:<br>在这里给出一组输入。例如：</p>
+<p>5 (表示三角形的行数)<br>7<br>3 8<br>8 1 0<br>2 7 4 4<br>4 5 2 6 5 </p>
+<p>输出样例:<br>在这里给出相应的输出。例如：<br>30</p>
+<br>
+<br>
 
-<h3 align="center">所有标签归档</h3></div>
-  </article>
-  
+<p>代码如下</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;algorithm&gt;</span></span><br><br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span> </span>&#123;<br><br>	<span class="hljs-keyword">int</span> n;<br>	<span class="hljs-built_in">cin</span>&gt;&gt;n;<br>	<span class="hljs-keyword">int</span> arr[n][n];<br>	<span class="hljs-keyword">int</span> add[n][n];<br><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;n; j++)<br>			arr[i][j]=add[i][j]=<span class="hljs-number">101</span>;<br><br><br><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;=i; j++)   <span class="hljs-comment">//注意这里 j &lt;= i , "="别忘了,一开始忘了纠错了挺久的，二维数组的一个小坑!!! </span><br>			<span class="hljs-built_in">cin</span>&gt;&gt;arr[i][j];<br><br><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>; i&lt;n; i++)<br>		add[n<span class="hljs-number">-1</span>][i]=arr[n<span class="hljs-number">-1</span>][i];<br><br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=n<span class="hljs-number">-2</span>; i&gt;=<span class="hljs-number">0</span>; --i)<br>		<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> j=<span class="hljs-number">0</span>; j&lt;=i; j++)<br>			add[i][j] = max(add[i+<span class="hljs-number">1</span>][j],add[i+<span class="hljs-number">1</span>][j+<span class="hljs-number">1</span>]) + arr[i][j];<br><br>	<span class="hljs-built_in">cout</span>&lt;&lt;add[<span class="hljs-number">0</span>][<span class="hljs-number">0</span>];<br><br>&#125;<br></code></pre></td></tr></table></figure>
 
-  
-  
+<p>开两个数组, <strong>arr[] add[]</strong><br>然后…来看看大神讲解用的示意图😁😁  </p>
+<br>
+<br>
 
-  
-  
-    <article class="main-container next">
-      <div class="tags-cloud">
-        <a href="/tags/Java/" style="font-size: 2em; color: #fb8c60">Java</a> <a href="/tags/PTA/" style="font-size: 3em; color: #ff5858">PTA</a> <a href="/tags/人在屋檐下，不得不低头/" style="font-size: 1em; color: #f7c068">人在屋檐下，不得不低头</a> <a href="/tags/倒计时100/" style="font-size: 1em; color: #f7c068">倒计时100</a> <a href="/tags/后台-爆破/" style="font-size: 1em; color: #f7c068">后台&爆破</a> <a href="/tags/幸运的一天/" style="font-size: 1em; color: #f7c068">幸运的一天</a> <a href="/tags/砖/" style="font-size: 1em; color: #f7c068">砖</a> <a href="/tags/祖国生日快乐/" style="font-size: 1em; color: #f7c068">祖国生日快乐</a> <a href="/tags/自己要越活越好/" style="font-size: 2em; color: #fb8c60">自己要越活越好</a>
+<p><img src="https://s2.ax1x.com/2019/10/16/KkFkLT.png" alt="KkFkLT.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/16/KkFmFJ.png" alt="KkFmFJ.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/16/KkFnY9.png" alt="KkFnY9.png"></p>
+<p><img src="https://s2.ax1x.com/2019/10/16/KkFMS1.png" alt="KkFMS1.png"></p>
+<br>
+<br>
+
+<p>arr[]用于输入数字三角形,左边<br>add[]用来存储数字和,右边  </p>
+<p><font color="#66CDAA"><strong>注意看那个注释</strong></font></p>
+<hr>
+<p>这里附上大佬博客<a href="https://blog.csdn.net/baidu_28312631/article/details/47418773" target="_blank" rel="noopener">原文</a></p>
+
+    </div>
+
+    <div class="article-footer">
+      <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PTA/">#PTA</a></li></ul>
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(https://s2.ax1x.com/2019/10/04/uBktCF.jpg)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/10/03/十三/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">向着那光亮,前进!</div>
+        </article>
       </div>
-    </article>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
   
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
 
   
   
 
-  
-  
-</div>
-</section>
+
+  </article>
+</div></section>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
