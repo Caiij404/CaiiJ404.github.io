@@ -27,7 +27,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
 
-  <title>分类 | 赶夜人</title>
+  <title>Bugku 域名解析 | 赶夜人</title>
 
   
 
@@ -83,7 +83,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
   </div>
 </header>
 
-    <section id="main"><!-- 页面详情页 -->
+    <section id="main"><!-- 文章详情页 -->
 
 
 <!-- banner container -->
@@ -103,93 +103,123 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 
   
   
-
-  
-  
-    <div class="banner-content full-content">
-      <div class="post-image" style="background-image: url(https://qiniu.miiiku.xyz/src/images/banner.jpg)"></div>
-      <div class="post-text">
-        <h1 class="title-wrap">分类</h1>
-        
-        <h2 class="title-sub-wrap">会越来越好的</h2>
-        
-      </div>
-    </div>
-  
-
-</div>
-
-<!-- 自定义页面 -->
-
-<div class="body-container">
-  
-  
-  <article class="main-container article-content">
-    <div class="article-entry"><h3 id="CATEGORIES"><a href="#CATEGORIES" class="headerlink" title="CATEGORIES"></a>CATEGORIES</h3><h3 id="分类列表"><a href="#分类列表" class="headerlink" title="分类列表"></a>分类列表</h3><h3 id="所有分类归档"><a href="#所有分类归档" class="headerlink" title="所有分类归档"></a>所有分类归档</h3></div>
-  </article>
-  
-
-  
-  
-    <article class="main-container next">
-      <div class="card-container card-categories">
-        <div class="card-wrap">
-          
+    
+      <div class="banner-content post-content no-post-image">
+        <div class="post-text">
+          <div class="type-wrap">
+            <a class="article-category-link" href="/categories/CTF/">CTF</a>
+          </div>
+          <h1 class="title-wrap">Bugku 域名解析</h1>
+          <div class="meta-wrap">
+            <strong>菜鸡</strong>
+            <span>发布于</span>
             
-            <div class="card-item">
-              <article>
-                <a class="card-link" href="/categories/CTF"></a>
-                <div class="text-info">CTF (3)</div>
-              </article>
-            </div>
-          
-            
-            <div class="card-item">
-              <article>
-                <a class="card-link" href="/categories/学习"></a>
-                <div class="text-info">学习 (5)</div>
-              </article>
-            </div>
-          
-            
-            <div class="card-item">
-              <article>
-                <a class="card-link" href="/categories/日常"></a>
-                <div class="text-info">日常 (4)</div>
-              </article>
-            </div>
-          
-            
-            <div class="card-item">
-              <article>
-                <a class="card-link" href="/categories/Git"></a>
-                <div class="text-info">Git (1)</div>
-              </article>
-            </div>
-          
-            
-            <div class="card-item">
-              <article>
-                <a class="card-link" href="/categories/墙"></a>
-                <div class="text-info">墙 (1)</div>
-              </article>
-            </div>
-          
+  <a href="javascript:;" class="article-date">
+    <time datetime="2019-10-26T05:59:08.004Z" itemprop="datePublished">2019-10-26</time>
+  </a>
+
+          </div>
         </div>
       </div>
-    </article>
+    
   
 
   
   
 
-  
-  
-
-  
-  
 </div>
-</section>
+
+<!-- 文章内容 -->
+
+<div class="body-container">
+  <article id="article-content" class="main-container article-content zoom">
+    
+    
+
+    <div class="article-entry">
+      <h1 id="域名解析"><a href="#域名解析" class="headerlink" title="域名解析"></a>域名解析</h1><p><strong><a href="https://ctf.bugku.com/challenges#%E5%9F%9F%E5%90%8D%E8%A7%A3%E6%9E%90" target="_blank" rel="noopener">题目</a></strong>  </p>
+<br>
+<br> 
+
+<p><img src="https://s2.ax1x.com/2019/10/26/KBCUIA.png" alt="KBCUIA.png">  </p>
+<br>
+<br>  
+
+<p>网上大多教程是修改本地文件<br><em>打开 C:\Windows\System32\drivers\etc\hosts 文本</em><br><em>在最后一行添加 123.206.87.240 flag.baidu.com，然后保存</em><br><em>flag.baidu.com，回车之后，网页爆出了flag</em>  </p>
+<br>
+<br>
+
+<p>但自个的电脑好像不太聪明的亚子<br>这法子没用啊  </p>
+<br>
+<br>
+
+<h1 id="使用burp-suite找出flag"><a href="#使用burp-suite找出flag" class="headerlink" title="使用burp suite找出flag"></a>使用burp suite找出flag</h1><p>对<strong>123.206.87.240</strong>拦截  </p>
+<br>
+<br>
+
+<p><img src="https://s2.ax1x.com/2019/10/26/KBPmy8.png" alt="KBPmy8.png">  </p>
+<br>
+<br>
+
+<p><strong>Repeater</strong>一下  </p>
+<br>
+<br>
+
+<p><img src="https://s2.ax1x.com/2019/10/26/KBiagP.png" alt="KBiagP.png"></p>
+<br>
+<br>
+
+<p><strong>Go</strong>一下<br>并没什么flag的影子  </p>
+<br>
+<br>
+
+<p>将<strong>Host</strong>的<strong>123.206.87.240</strong>修改成<strong>flag.baidu.com</strong><br>再<strong>Go</strong>一下<br>flag出来了  </p>
+<br>
+<br>
+
+<p><img src="https://s2.ax1x.com/2019/10/26/KBioE4.png" alt="KBioE4.png"></p>
+
+    </div>
+
+    <div class="article-footer">
+      
+    </div>
+
+    <div class="article-navs">
+      
+<nav class="card-container card-article-nav">
+  <div class="card-wrap">
+    
+    
+      <div class="card-item img">
+        <article>
+          
+            <div class="card-cover" style="background-image: url(https://s2.ax1x.com/2019/10/26/K0oD7F.png)"></div>
+          
+          <a class="card-link article-nav-link" href="/2019/10/26/Postman的使用/"></a>
+          <div class="article-nav-caption">Older</div>
+          <div class="article-nav-title">Postman的使用</div>
+        </article>
+      </div>
+    
+  </div>
+</nav>
+
+    </div>
+    
+    
+
+  
+  <div class="valine-container">
+    <div id="valine_thread" class="valine-thread"></div>
+  </div>
+
+  
+  
+
+
+  </article>
+</div></section>
 
     <!-- footer container -->
 <footer id="footer" class="footer">
