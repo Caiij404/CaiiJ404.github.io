@@ -138,7 +138,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
     
 
     <div class="article-entry">
-      <img src="https://s2.ax1x.com/2019/11/01/KbApL9.jpg" title="快乐的源泉为什么不能是学习呢">
+      <h1 id="快乐的源泉"><a href="#快乐的源泉" class="headerlink" title="快乐的源泉"></a>快乐的源泉</h1><img src="https://s2.ax1x.com/2019/11/01/KbApL9.jpg" title="快乐的源泉为什么不能是学习呢">
 
 <br>
 <br>
@@ -156,10 +156,20 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
 
 <hr>
-<p>7-2 找第k小的数 (30 分)<br>设计一个平均时间为O(n)的算法，在n(1&lt;=n&lt;=1000)个无序的整数中找出第k小的数。</p>
-<p>提示：函数int partition(int a[],int left,int right)的功能是根据a[left]<del>a[right]中的某个元素x（如a[left])对a[left]</del>a[right]进行划分，划分后的x所在位置的左段<br>全小于等于x,右段全大于等于x,同时利用x所在的位置还可以计算出x是这批数据按升非降序排列的第几个数。因此可以编制int find(int a[],int left,int right,int k)函数，<br>通过调用partition函数获得划分点，判断划分点是否第k小，若不是，递归调用find函数继续在左段或右段查找。</p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<h1 id="算是掌握了这个问题的代码了"><a href="#算是掌握了这个问题的代码了" class="headerlink" title="算是掌握了这个问题的代码了"></a>算是掌握了这个问题的代码了</h1><p>7-2 找第k小的数 (30 分)<br>设计一个平均时间为O(n)的算法，在n(1&lt;=n&lt;=1000)个无序的整数中找出第k小的数。</p>
+<p>提示：函数int partition(int a[],int left,int right)的功能是根据a[left]~a[right]中的某个元素x（如a[left])对a[left]~a[right]进行划分，划分后的x所在位置的左段<br>全小于等于x,右段全大于等于x,同时利用x所在的位置还可以计算出x是这批数据按升非降序排列的第几个数。因此可以编制int find(int a[],int left,int right,int k)函数，<br>通过调用partition函数获得划分点，判断划分点是否第k小，若不是，递归调用find函数继续在左段或右段查找。</p>
 <p>输入格式:<br>输入有两行：</p>
 <p>第一行是n和k，0&lt;k&lt;=n&lt;=10000</p>
 <p>第二行是n个整数</p>
@@ -170,7 +180,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <p>输出样例:</p>
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-number">2</span><br></code></pre></td></tr></table></figure>
 
-<h1 id="算是掌握了这个问题的代码了"><a href="#算是掌握了这个问题的代码了" class="headerlink" title="算是掌握了这个问题的代码了"></a>算是掌握了这个问题的代码了</h1><p>问题是要O(n)的问题,但这归并好像是O(nlogn)的……  </p>
+<p>问题是要O(n)的问题,但这归并好像是O(nlogn)的……  </p>
 <figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><code class="hljs undefined"><span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span><br><span class="hljs-keyword">using</span> <span class="hljs-keyword">namespace</span> <span class="hljs-built_in">std</span>;<br><span class="hljs-keyword">int</span> arr[<span class="hljs-number">1000</span>],aux[<span class="hljs-number">1000</span>];  <span class="hljs-comment">// 默认全为 0 </span><br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">merge</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[],<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> m,<span class="hljs-keyword">int</span> r)</span><br></span>&#123;<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=l;i&lt;=r;i++)  <span class="hljs-comment">// " i&lt;=r " 有个等于号,因为 r=n-1  </span><br>	aux[i]=arr[i];<br>		<br>	<span class="hljs-keyword">int</span> i = l , j = m + <span class="hljs-number">1</span> , k = l;<br>	<span class="hljs-keyword">while</span>(i&lt;=m &amp;&amp; j&lt;=r)<br>	&#123;<br>		<span class="hljs-keyword">if</span>(aux[i]&lt;aux[j]) <br>			arr[k++] = aux[i++];<br>		<span class="hljs-keyword">else</span> <br>			arr[k++] = aux[j++];<br>	&#125;<br>	<br>	<span class="hljs-keyword">while</span>(i&gt;m &amp;&amp; j&lt;=r) arr[k++] = aux[j++];    <br>	<span class="hljs-comment">// 括号内少了 " &amp;&amp; j&lt;=r " 会出错,直接没有结果输出</span><br>	<br>	<span class="hljs-keyword">while</span>(j&gt;r &amp;&amp; i&lt;=m) arr[k++] = aux[i++];<br>	<span class="hljs-comment">// 同上  (尚未搞懂为什么)</span><br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mergesort</span><span class="hljs-params">(<span class="hljs-keyword">int</span> arr[],<span class="hljs-keyword">int</span> l,<span class="hljs-keyword">int</span> r)</span><br></span>&#123;<br>	<span class="hljs-keyword">if</span>(l&lt;r)<br>	&#123;<br>		<span class="hljs-keyword">int</span> m=(l+r)/<span class="hljs-number">2</span>;<br>		mergesort(arr,l,m);<br>		mergesort(arr,m+<span class="hljs-number">1</span>,r);<br>		merge(arr,l,m,r);<br>	&#125;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span><br></span>&#123;<br>	<span class="hljs-keyword">int</span> n,k;<br>	<span class="hljs-built_in">cin</span>&gt;&gt;n;<br>	<span class="hljs-built_in">cin</span>&gt;&gt;k;<br>	<br>	<span class="hljs-keyword">for</span>(<span class="hljs-keyword">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)<br>	&#123;<br>		<span class="hljs-built_in">cin</span>&gt;&gt;arr[i];	<br>	&#125;<br>	<br>	<span class="hljs-keyword">int</span> l=<span class="hljs-number">0</span>,r=n<span class="hljs-number">-1</span>;<br>	mergesort(arr,l,r);<br>	<br>	<span class="hljs-built_in">cout</span>&lt;&lt;arr[k - <span class="hljs-number">1</span>];   <span class="hljs-comment">// k-1 注意下 </span><br>	<br>	<span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br> &#125; <br> <br>O(nlogn)<br></code></pre></td></tr></table></figure>
 
 <h1 id="sort-函数的应用"><a href="#sort-函数的应用" class="headerlink" title="sort()函数的应用"></a>sort()函数的应用</h1><p><em>使用库里的函数sort()同样可以解决问题，但注意包含头文件*</em>#include <algorithm>** *  </algorithm></p>
@@ -188,8 +198,10 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 <nav class="card-container card-article-nav">
   <div class="card-wrap">
     
-      <div class="card-item">
+      <div class="card-item img">
         <article>
+          
+            <div class="card-cover" style="background-image: url(https://s2.ax1x.com/2019/11/02/KbOmgx.jpg)"></div>
           
           <a class="card-link article-nav-link" href="/2019/09/23/7.3/"></a>
           <div class="article-nav-caption">Newer</div>
