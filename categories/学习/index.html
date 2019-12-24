@@ -325,7 +325,7 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 					minutes - 0-59之间的整数，做为date对象的分钟数 
 					seconds - 0-59之间的整数，做为date对象的秒数 
 					microseconds - 0-999之间的整数，做为date对象的毫秒数 */ 
-				var t1 = Date.UTC(2019, 09, 23, 00, 00, 00); //北京时间2018-2-13 00:00:00 
+				var t1 = Date.UTC(2019, 09, 20, 00, 00, 00); //北京时间2018-2-13 00:00:00 
 				var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond); 
 				var diff = t2 - t1; var diffYears = Math.floor(diff / years); 
 				var diffDays = Math.floor((diff / days) - diffYears * 365); 
@@ -333,7 +333,6 @@ setTimeout(function () { document.title = OriginTitile }, 3e3)) })
 				var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) / minutes); 
 				var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours - diffMinutes * minutes) / seconds); 
 				document.getElementById("sitetime").innerHTML = "🌇本站已勉强存活 " +diffYears+" 年 "+diffDays + " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒🌃"; }
-					/*因为建站时间还没有一年，就将之注释掉了。需要的可以取消*/ 
 				siteTime(); 
 	</script>
 <!--到此-->
